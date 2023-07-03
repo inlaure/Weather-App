@@ -1,5 +1,5 @@
 'use strict';
-const API_KEY = 'a7d43158371f4276add134944232504';
+const API_KEY = '238a55a5092645d289e193145230307';
 const weatherContainer = document.querySelector('.weather-container');
 const resultContainer = document.querySelector('.result-container');
 const weekContainer = document.querySelector('.week-container');
@@ -188,7 +188,21 @@ function setError() {
 searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
   let searchValue = searchField.value;
-  searchField.focus();
   getCity(searchValue);
   getDailyForecast(searchValue);
+});
+
+//10.Display search data on pressing 'Enter'
+window.addEventListener('keyup', function (e) {
+  e.preventDefault();
+  if (e.key === 'Enter') {
+    let searchValue = searchField.value;
+    getCity(searchValue);
+    getDailyForecast(searchValue);
+  }
+});
+
+//11. Focus the search field
+window.addEventListener('load', function (e) {
+  searchField.focus();
 });
