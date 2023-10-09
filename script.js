@@ -1,5 +1,5 @@
 'use strict';
-const API_KEY = '8e2938bbe87c496991991647230109';
+const API_KEY = 'f3a4b11242694a50a9494626230910';
 const weatherContainer = document.querySelector('.weather-container');
 const resultContainer = document.querySelector('.result-container');
 const weekContainer = document.querySelector('.week-container');
